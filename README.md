@@ -15,7 +15,7 @@
 
 - Untuk mengakses Metrics yang diexpose oleh service (nodejs) menggunakan endpoint berikut *localhost:8080/metrics*
 <div align="center">
-    <img width="300" src="./images/node-metrics.png">  
+    <img width="700" src="./images/node-metrics.png">  
 </div>
 
 - Berikut ada metrics yang dibuat kostum bisa dilihat diprometheus:
@@ -23,8 +23,8 @@
     * metrics_endpoint_get_requests
     * http_request_duration_seconds 
 <div align="center">
-    <img width="300" src="./images/prome-1.png">  
-    <img width="300" src="./images/prome-2.png">  
+    <img width="700" src="./images/prome-1.png">  
+    <img width="1000" src="./images/prome-2.png">  
 </div>
 
 - untuk Api nya bisa diakses (local) diendpoint berikut
@@ -32,8 +32,8 @@
     localhost:8080/?height=150&weight=53
 ```
 <div align="center">
-    <img width="300" src="./images/service-1.png">  
-    <img width="300" src="./images/service-2.png">  
+    <img width="700" src="./images/service-1.png">  
+    <img width="700" src="./images/service-2.png">  
 </div>
 
 

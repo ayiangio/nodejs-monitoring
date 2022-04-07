@@ -24,7 +24,7 @@
     * http_request_duration_seconds 
 <div align="center">
     <img width="700" src="./images/prome-1.png">  
-    <img width="800" src="./images/prome-2.png">  
+    <img width="700" src="./images/prome-2.png">  
 </div>
 
 - untuk Api nya bisa diakses (local) diendpoint berikut

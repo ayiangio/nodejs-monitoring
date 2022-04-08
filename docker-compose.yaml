@@ -34,13 +34,13 @@ services:
       - 3000
     networks:
       - monitoring
-  nodejs-app:
-    build:
-      context: nodejs-app
-    container_name: nodejs-app
-    ports:
-      - 8080:8080
-    expose:
-      - 8080
-    networks:
-      - monitoring
+  # nodejs-app:
+  #   build:
+  #     context: nodejs-app
+  #   container_name: nodejs-app
+  #   ports:
+  #     - 8080:8080
+  #   expose:
+  #     - 8080
+  #   networks:
+  #     - monitoring

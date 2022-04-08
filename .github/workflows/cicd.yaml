@@ -31,7 +31,7 @@ jobs:
       uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.HOST }}
-        username: ${{ secrets.USER_DEV }}
+        username: ${{ secrets.USER}}
         password: ${{ secrets.PASS }}
         port: 22
         script: cd service && npm install && systemctl restart bmi-api

@@ -16,9 +16,9 @@ jobs:
       run : |
             cd nodejs-app && npm install 
     - name: Unit testing 
-      run : npm test
+      run : cd nodejs-app && npm test
     - name: Delete Dependency
-      run : rm -rf node_modules/
+      run : cd nodejs-app && rm -rf node_modules/
     - name: Deployment
       uses: garygrossgarten/github-action-scp@release
       with:

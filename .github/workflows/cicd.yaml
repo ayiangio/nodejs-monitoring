@@ -1,0 +1,37 @@
+name: Bmi CICD
+
+on:
+  push:
+    branches: [ Master]
+
+jobs:
+  Production:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
+      with:
+          node-version: '16'
+    - name : Install Dependency
+      run : |
+            cd nodejs-app && npm install 
+    - name: Unit testing 
+      run : npm test
+    - name: Delete Dependency
+      run : rm -rf node_modules/
+    - name: Deployment
+      uses: garygrossgarten/github-action-scp@release
+      with:
+          local: nodejs-app
+          remote: ${{ secrets.DIRECTORY }}
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USER }}
+          password: ${{ secrets.PASS }}
+    - name: Restart Service
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USER_DEV }}
+        password: ${{ secrets.PASS }}
+        port: 22
+        script: cd service && npm install && systemctl restart bmi-api

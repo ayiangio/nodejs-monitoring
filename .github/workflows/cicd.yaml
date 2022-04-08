@@ -2,7 +2,7 @@ name: Bmi CICD
 
 on:
   push:
-    branches: [ Master]
+    branches: [ master]
 
 jobs:
   Production:
